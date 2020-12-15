@@ -43,27 +43,27 @@ _ has_one  :shipping_area
 _ belongs_to :user
 
 # credit_cardsテーブル
-| Column        | Type       | Options           |
-|---------------|------------|-------------------|
-| information   | integer    | null:false        |
-| month         | integer    | null:false        |
-| year          | integer    | null:false        |
-| security_code | integer    | null:false        |
-| item          | references | foreign_key: true |
+| Column        | Type       | Options                       |
+|---------------|------------|-------------------------------|
+| information   | integer    | null:false                    |
+| month         | integer    | null:false                    |
+| year          | integer    | null:false                    |
+| security_code | integer    | null:false                    |
+| item          | references | null:false, foreign_key: true |
 
 ### Association
 _ belongs_to :item
 
 # shipping_areasテーブル
-| Column         | Type       | Options           |
-|----------------|------------|-------------------|
-| postal_code    | integer    | null:false        |
-| prefectures    | integer    | null:false        |
-| municipalities | string     | null:false        |
-| address        | string     | null:false        |
-| building       | string     |                   |
-| phone_number   | integer    | null:false        |
-| item           | references | foreign_key: true |
+| Column         | Type       | Options                       |
+|----------------|------------|-------------------------------|
+| postal_code    | integer    | null:false                    |
+| prefectures    | integer    | null:false                    |
+| municipalities | string     | null:false                    |
+| address        | string     | null:false                    |
+| building       | string     |                               |
+| phone_number   | integer    | null:false                    |
+| item           | references | null:false, foreign_key: true |
 
 ### Association
 _ belongs_to :item
