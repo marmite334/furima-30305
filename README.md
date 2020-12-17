@@ -31,7 +31,7 @@ _ has_many :purchase_managements
 
 ### Association
 _ belongs_to :user
-_ belongs_to :purchase_management
+_ has_one :purchase_management
 
 # purchase_managementsテーブル
 | Column        | Type       | Options                       |
