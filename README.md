@@ -1,16 +1,16 @@
 # README
 
 # usersテーブル
-| Column             | Type   | Options                 |
-|--------------------|--------|-------------------------|
-| nickname           | string | null:false              |
-| email              | string | null:false,unique: true |
-| encrypted_password | string | null:false              |
-| first_name         | string | null:false              |
-| last_name          | string | null:false              |
-| kana_first_name    | string | null:false              |
-| kana_last_name     | string | null:false              |
-| birth_date         | date   | null:false              |
+| Column             | Type   | Options                  |
+|--------------------|--------|--------------------------|
+| nickname           | string | null:false               |
+| email              | string | null:false, unique: true |
+| encrypted_password | string | null:false               |
+| first_name         | string | null:false               |
+| last_name          | string | null:false               |
+| kana_first_name    | string | null:false               |
+| kana_last_name     | string | null:false               |
+| birth_date         | date   | null:false               |
 
 ### Association
 _ has_many :items
@@ -34,12 +34,11 @@ _ belongs_to :user
 _ belongs_to :purchase_management
 
 # purchase_managementsテーブル
-| Column         | Type       | Options                       |
-|----------------|------------|-------------------------------|
-| item           | references | null:false, foreign_key: true |
-| item_user      | references | null:false, foreign_key: true |
-| purchased_user | references | null:false, foreign_key: true |
-| shipping_area  | references | null:false, foreign_key: true |
+| Column        | Type       | Options                       |
+|---------------|------------|-------------------------------|
+| item          | references | null:false, foreign_key: true |
+| user          | references | null:false, foreign_key: true |
+| shipping_area | references | null:false, foreign_key: true |
 
 ### Association
 _ belongs_to :user
