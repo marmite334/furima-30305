@@ -1,16 +1,16 @@
 # README
 
 # usersテーブル
-| Column          | Type   | Options    |
-|-----------------|--------|------------|
-| nickname        | string | null:false |
-| email           | string | null:false |
-| password        | string | null:false |
-| first_name      | string | null:false |
-| last_name       | string | null:false |
-| kana_first_name | string | null:false |
-| kana_last_name  | string | null:false |
-| birth_date      | date   | null:false |
+| Column             | Type   | Options    |
+|--------------------|--------|------------|
+| nickname           | string | null:false |
+| email              | string | null:false |
+| encrypted_password | string | null:false |
+| first_name         | string | null:false |
+| last_name          | string | null:false |
+| kana_first_name    | string | null:false |
+| kana_last_name     | string | null:false |
+| birth_date         | date   | null:false |
 
 ### Association
 _ has_many :items
