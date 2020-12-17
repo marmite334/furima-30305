@@ -1,24 +1,59 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# usersテーブル
+| Column             | Type   | Options                  |
+|--------------------|--------|--------------------------|
+| nickname           | string | null:false               |
+| email              | string | null:false, unique: true |
+| encrypted_password | string | null:false               |
+| first_name         | string | null:false               |
+| last_name          | string | null:false               |
+| kana_first_name    | string | null:false               |
+| kana_last_name     | string | null:false               |
+| birth_date         | date   | null:false               |
 
-Things you may want to cover:
+### Association
+_ has_many :items
+_ has_many :purchase_managements
 
-* Ruby version
+# itemsテーブル
+| Column        | Type       | Options                       |
+|---------------|------------|-------------------------------|
+| name          | string     | null:false                    |
+| explanation   | text       | null:false                    |
+| price         | integer    | null:false                    |
+| category_id   | integer    | null:false                    |
+| state_id      | integer    | null:false                    |
+| charges_id    | integer    | null:false                    |
+| prefecture_id | integer    | null:false                    |
+| days_id       | integer    | null:false                    |
+| user          | references | null:false, foreign_key: true |
 
-* System dependencies
+### Association
+_ belongs_to :user
+_ has_one :purchase_management
 
-* Configuration
+# purchase_managementsテーブル
+| Column        | Type       | Options                       |
+|---------------|------------|-------------------------------|
+| item          | references | null:false, foreign_key: true |
+| user          | references | null:false, foreign_key: true |
 
-* Database creation
+### Association
+_ belongs_to :user
+_ belongs_to :item
+_ has_one :shipping_area
 
-* Database initialization
+# shipping_areasテーブル
+| Column              | Type       | Options                       |
+|---------------------|------------|-------------------------------|
+| postal_code         | string     | null:false                    |
+| prefecture_id       | integer    | null:false                    |
+| municipalities      | string     | null:false                    |
+| address             | string     | null:false                    |
+| building            | string     |                               |
+| phone_number        | string     | null:false                    |
+| purchase_management | references | null:false, foreign_key: true |
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+_ belongs_to :purchase_management
