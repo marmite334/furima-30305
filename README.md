@@ -38,7 +38,6 @@ _ belongs_to :purchase_management
 |---------------|------------|-------------------------------|
 | item          | references | null:false, foreign_key: true |
 | user          | references | null:false, foreign_key: true |
-| shipping_area | references | null:false, foreign_key: true |
 
 ### Association
 _ belongs_to :user

@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-12-17T06:43:58.610Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.0 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="LImNZwePqH4KAUHQpgim" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2020-12-17T08:13:11.078Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.0 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="IwrJCUujuyWJI7ddPsaK" version="13.10.0" type="embed">
     <diagram id="McMUi0i85mTlR5102VOO" name="ページ1">
         <mxGraphModel dx="524" dy="1717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F4F1DE" math="0" shadow="0">
             <root>
@@ -37,7 +37,7 @@
                 <mxCell id="30" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=ERone;startFill=0;startSize=15;endArrow=ERone;endFill=0;endSize=15;strokeColor=#E07A5F;fillColor=#F2CC8F;fontColor=#393C56;" edge="1" parent="1" source="19" target="11">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="&lt;div&gt;&lt;span&gt;purchase_managementsテーブル&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;item (references型, NOT NULL)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;user (references型, NOT NULL)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;shipping_area (references型, NOT NULL)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#E07A5F;fillColor=#F2CC8F;fontColor=#000000;align=left;" vertex="1" parent="1">
+                <mxCell id="19" value="&lt;div&gt;&lt;span&gt;purchase_managementsテーブル&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;item (references型, NOT NULL)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;user (references型, NOT NULL)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#E07A5F;fillColor=#F2CC8F;fontColor=#000000;align=left;" vertex="1" parent="1">
                     <mxGeometry x="210" y="240" width="240" height="80" as="geometry"/>
                 </mxCell>
             </root>
