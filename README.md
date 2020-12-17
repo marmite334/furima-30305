@@ -47,14 +47,14 @@ _ belongs_to :item
 _ belongs_to :shipping_area
 
 # shipping_areasテーブル
-| Column         | Type       | Options                       |
-|----------------|------------|-------------------------------|
-| postal_code    | string     | null:false                    |
-| prefectures_id | integer    | null:false                    |
-| municipalities | string     | null:false                    |
-| address        | string     | null:false                    |
-| building       | string     |                               |
-| phone_number   | integer    | null:false                    |
+| Column         | Type    | Options                       |
+|----------------|---------|-------------------------------|
+| postal_code    | string  | null:false                    |
+| prefectures_id | integer | null:false                    |
+| municipalities | string  | null:false                    |
+| address        | string  | null:false                    |
+| building       | string  |                               |
+| phone_number   | string  | null:false                    |
 
 ### Association
 _ belongs_to :purchase_management
