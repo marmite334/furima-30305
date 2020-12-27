@@ -8,5 +8,5 @@ class Item < ApplicationRecord
   validates       :prefecture_id, presence: true
   validates       :days_id,       presence: true
   belongs_to      :user
-  has_on_attached :image
+  has_one_attached :image
 end
