@@ -4,7 +4,6 @@ RSpec.describe Item, type: :model do
   before do
     @item = FactoryBot.build(:item)
     @item.image = fixture_file_upload('test/fixtures/files/test_image.jpg')
-
   end
 
   describe '商品の保存' do
