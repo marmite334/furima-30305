@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Item, type: :model do
   before do
     @item = FactoryBot.build(:item)
+    @item.image = fixture_file_upload('test/fixtures/files/test_image.jpg')
+
   end
 
   describe '商品の保存' do
@@ -23,6 +25,12 @@ RSpec.describe Item, type: :model do
     end
 
     context '商品が保存できない場合' do
+      it 'imageが空だと保存できない' do
+        @item.image = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Image can't be blank")
+      end
+
       it 'nameが空だと保存できない' do
         @item.name = nil
         @item.valid?
