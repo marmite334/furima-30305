@@ -15,9 +15,9 @@ RSpec.describe Item, type: :model do
       @item.valid?
     end
 
-    it 'explanationが100文字以下で保存できる' do
-     @item.explanation =  Faker::Name.initials(number: 1000)
-     @item.valid?
+    it 'explanationが1000文字以下で保存できる' do
+      @item.explanation = Faker::Name.initials(number: 1000)
+      @item.valid?
     end
 
     it 'nameが空だと保存できない' do
@@ -30,7 +30,7 @@ RSpec.describe Item, type: :model do
       @item.name = Faker::Name.initials(number: 41)
       @item.valid?
     end
-    
+
     it 'explanationが空だと保存できない' do
       @item.explanation = nil
       @item.valid?
@@ -38,7 +38,7 @@ RSpec.describe Item, type: :model do
     end
 
     it 'explanationが1001文字以上で保存できない' do
-      @item.explanation =  Faker::Name.initials(number: 1001)
+      @item.explanation = Faker::Name.initials(number: 1001)
       @item.valid?
     end
 
@@ -50,7 +50,7 @@ RSpec.describe Item, type: :model do
     it 'category_idが1だと保存できない' do
       @item.category_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Category Select")
+      expect(@item.errors.full_messages).to include('Category Select')
     end
 
     it 'state_idが空だと保存できない' do
@@ -61,7 +61,7 @@ RSpec.describe Item, type: :model do
     it 'state_idが1だと保存できない' do
       @item.state_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("State Select")
+      expect(@item.errors.full_messages).to include('State Select')
     end
 
     it 'charges_idが空だと保存できない' do
@@ -72,7 +72,7 @@ RSpec.describe Item, type: :model do
     it 'charges_idが1だと保存できない' do
       @item.charges_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Charges Select")
+      expect(@item.errors.full_messages).to include('Charges Select')
     end
 
     it 'prefecture_idが空だと保存できない' do
@@ -83,7 +83,7 @@ RSpec.describe Item, type: :model do
     it 'prefecture_idが1だと保存できない' do
       @item.prefecture_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Prefecture Select")
+      expect(@item.errors.full_messages).to include('Prefecture Select')
     end
 
     it 'days_idが空だと保存できない' do
@@ -94,7 +94,7 @@ RSpec.describe Item, type: :model do
     it 'days_idが1だと保存できない' do
       @item.days_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Days Select")
+      expect(@item.errors.full_messages).to include('Days Select')
     end
 
     it 'priceが空だと保存できない' do
@@ -106,19 +106,19 @@ RSpec.describe Item, type: :model do
     it 'priceが299以下では保存できない' do
       @item.price = Faker::Number.within(range: 0..299)
       @item.valid?
-      expect(@item.errors.full_messages).to include("Price Out of setting range")
+      expect(@item.errors.full_messages).to include('Price Out of setting range')
     end
 
     it 'priceが10000000以上だと保存できない' do
       @item.price = Faker::Number.number(digits: 8)
       @item.valid?
-      expect(@item.errors.full_messages).to include("Price Out of setting range")
+      expect(@item.errors.full_messages).to include('Price Out of setting range')
     end
 
     it 'priceが数値以外では登録できない' do
       @item.price = Faker::String.random
       @item.valid?
-      expect(@item.errors.full_messages).to include("Price Half-width number")
+      expect(@item.errors.full_messages).to include('Price Half-width number')
     end
   end
 end
