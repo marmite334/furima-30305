@@ -3,7 +3,7 @@ class Item < ApplicationRecord
     validates        :name
     validates        :explanation
     validates        :price,         format: { with: /\A([1-9]\d*)*[1-9]\d*\z/, message: 'Half-width number' },
-                                     inclusion: { in: 300..9_999_999,   message: 'Out of setting range' }
+                                     inclusion: { in: 300..9_999_999, message: 'Out of setting range' }
     with_options numericality: { other_than: 1, message: 'Select' } do
       validates        :category_id
       validates        :state_id
