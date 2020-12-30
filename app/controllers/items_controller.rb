@@ -1,23 +1,20 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, expect: [:new, :create]
+  
+
   def index
   end
 
   def new
-    if user_signed_in?
-      @item = Item.new
-    else
-      redirect_to user_session_path
-    end
+    @item = Item.new
   end
 
   def create
-    if user_signed_in?
-      @item = Item.create(item_params)
-      if @item.save
-        redirect_to root_path(@item)
-      else
-        render :new
-      end
+    @item = Item.create(item_params)
+    if @item.save
+      redirect_to root_path(@item)
+    else
+      render :new
     end
   end
 
