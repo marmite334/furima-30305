@@ -45,6 +45,7 @@ RSpec.describe Item, type: :model do
     it 'category_idが空だと保存できない' do
       @item.category_id = nil
       @item.valid?
+      expect(@item.errors.full_messages).to include("Category can't be blank")
     end
 
     it 'category_idが1だと保存できない' do
@@ -56,6 +57,7 @@ RSpec.describe Item, type: :model do
     it 'state_idが空だと保存できない' do
       @item.state_id = nil
       @item.valid?
+      expect(@item.errors.full_messages).to include("State can't be blank")
     end
 
     it 'state_idが1だと保存できない' do
@@ -67,6 +69,7 @@ RSpec.describe Item, type: :model do
     it 'charges_idが空だと保存できない' do
       @item.charges_id = nil
       @item.valid?
+      expect(@item.errors.full_messages).to include("Charges can't be blank")
     end
 
     it 'charges_idが1だと保存できない' do
@@ -78,6 +81,7 @@ RSpec.describe Item, type: :model do
     it 'prefecture_idが空だと保存できない' do
       @item.prefecture_id = nil
       @item.valid?
+      expect(@item.errors.full_messages).to include("Prefecture can't be blank")
     end
 
     it 'prefecture_idが1だと保存できない' do
@@ -89,6 +93,7 @@ RSpec.describe Item, type: :model do
     it 'days_idが空だと保存できない' do
       @item.days_id = nil
       @item.valid?
+      expect(@item.errors.full_messages).to include("Days can't be blank")
     end
 
     it 'days_idが1だと保存できない' do
