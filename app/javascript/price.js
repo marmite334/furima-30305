@@ -1,7 +1,7 @@
-function price() {
+function price () {
   const totalPrice = document.getElementById("item-price");
   totalPrice.addEventListener("keyup", () => {
-    const totalPriceValue = totalPrice.value
+    const totalPriceValue = totalPrice.value;
     const taxPrice =  Math.floor(totalPriceValue / 10) ;
     const addTaxPrice = document.getElementById('add-tax-price');
     const userProfitPrice = totalPriceValue - taxPrice;
