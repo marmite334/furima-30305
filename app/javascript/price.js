@@ -11,4 +11,4 @@ function price () {
   });
 }
 
-window.addEventListener('load', price);
+window.addEventListener('keyup', price);
