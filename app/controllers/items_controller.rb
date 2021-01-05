@@ -22,6 +22,22 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(parmas[:id])
+    if current_user.id == @item.user.id
+      if @item.save
+        @item.update(item_params)
+        redirect_to item_oath(@item)
+      else
+        render :show
+      end
+    end
+  end
+
   private
 
   def item_params
