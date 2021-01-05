@@ -27,13 +27,13 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(parmas[:id])
+    @item = Item.find(params[:id])
     if current_user.id == @item.user.id
       if @item.save
         @item.update(item_params)
-        redirect_to item_oath(@item)
+        redirect_to item_path(@item)
       else
-        render :show
+        render :edit
       end
     end
   end
