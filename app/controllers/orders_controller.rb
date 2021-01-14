@@ -1,8 +1,5 @@
 class OrdersController < ApplicationController
   def index
-  end
-
-  def new
-    @order = OrderManagements.new
+    @order_management = OrderManagement.new
   end
 end
