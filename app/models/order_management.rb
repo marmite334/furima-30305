@@ -16,7 +16,8 @@ class OrderManagement
   def save
     user = PurchaseManagement.create(user_id: user.id)
     item = PurchaseManagement.create(item_id: item.id)
-    ShippingArea.create(postal_code: postal_code, prefecture_id: prefecutre_id, municipalities: municipalities, address: address, building: building, phone_number: phone_number, purchase_management_id: purchase_management.id)
+    ShippingArea.create(postal_code: postal_code, prefecture_id: prefecutre_id, municipalities: municipalities,
+       address: address, building: building, phone_number: phone_number, purchase_management_id: purchase_management.id)
   end
 
 end
