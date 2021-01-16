@@ -3,14 +3,14 @@ class OrderManagement
   attr_accessor :item_id, :user_id, :postal_code, :prefecture_id, :municipalities, :address, :building, :phone_number, :purchase_management_id
 
   with_options presence: :true do
-    validates :item
-    validates :user
+    validates :item_id
+    validates :user_id
     validates :postal_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)" }
     validates :prefecture_id, numericality: { other_than: 1, message: 'Select' }
     validates :municipalities
     validates :address
     validates :phone_number, format: { with: /\A\d{10,11}\z/, message: 'Input only number' }
-    validates :purchase_management
+    validates :purchase_management_id
   end
 
   def save
