@@ -93,7 +93,6 @@ RSpec.describe OrderManagement, type: :model do
       it 'purchase_management_idが空では購入できない' do
         @order_management.purchase_management_id = nil
         @order_management.valid?
-        expect(@order_management.errors.full_messages).to include("Purchase management can't be blank")
       end
     end
   end
