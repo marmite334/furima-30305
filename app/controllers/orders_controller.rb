@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :get_item_id
+  before_action :move_to_index
 
   def index
     @order_management = OrderManagement.new
@@ -39,4 +40,11 @@ class OrdersController < ApplicationController
       currency: 'jpy'
     )
   end
+
+  def move_to_index
+    if current_user.id == @item.user.id || Purchase_management.exists?(item_id)
+      redirect_to root_path
+    end
+  end
+
 end
