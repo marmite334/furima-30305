@@ -42,7 +42,7 @@ class OrdersController < ApplicationController
   end
 
   def move_to_index
-    if current_user.id == @item.user.id || Purchase_management.exists?(item_id)
+    if current_user.id == @item.user.id || PurchaseManagement.exists?(item_id: @item.id)
       redirect_to root_path
     end
   end
