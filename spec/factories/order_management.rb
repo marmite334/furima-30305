@@ -1,7 +1,5 @@
 FactoryBot.define do
   factory :order_management do
-    item_id                { 1 }
-    user_id                { 3 }
     token                  { 'tok_abcdefghijk00000000000000000' }
     postal_code            { '289-2114' }
     prefecture_id          { 12 }
