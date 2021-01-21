@@ -12,7 +12,7 @@ RSpec.describe OrderManagement, type: :model do
       end
       it 'buildingが空でも購入できる' do
         @order_management.building = nil
-        @order_management.valid?
+        expect(@order_management).to be_valid
       end
     end
 
