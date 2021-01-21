@@ -38,7 +38,7 @@ RSpec.describe OrderManagement, type: :model do
         expect(@order_management.errors.full_messages).to include("Postal code can't be blank")
       end
       it 'postal_codeに-が無いと購入できない' do
-        @order_management.postal_code = nil
+        @order_management.postal_code = '2892114'
         @order_management.valid?
         expect(@order_management.errors.full_messages).to include('Postal code is invalid. Include hyphen(-)')
       end
