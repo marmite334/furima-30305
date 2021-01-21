@@ -56,8 +56,6 @@ class ItemsController < ApplicationController
   end
 
   def move_to_index
-    if current_user.id != @item.user.id || PurchaseManagement.exists?(item_id: @item.id)
-      redirect_to root_path
-    end
+    redirect_to root_path if current_user.id != @item.user.id || PurchaseManagement.exists?(item_id: @item.id)
   end
 end
