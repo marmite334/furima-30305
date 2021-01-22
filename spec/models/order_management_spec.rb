@@ -4,9 +4,11 @@ RSpec.describe OrderManagement, type: :model do
   describe '商品の購入' do
     before do
       @order_management = FactoryBot.build(:order_management)
-      @order_management.item_id = FactoryBot.build(:item)
-      @order_management.item_id.image = fixture_file_upload('test/fixtures/files/test_image.jpg')
-      @order_management.user_id = FactoryBot.build(:user)
+      item = FactoryBot.build(:item)
+      user = FactoryBot.build(:user)
+      item.image = fixture_file_upload('test/fixtures/files/test_image.jpg')
+      @order_management.item_id = item
+      @order_management.user_id = user
     end
 
     context '商品が購入できるとき' do
