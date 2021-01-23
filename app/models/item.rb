@@ -21,4 +21,5 @@ class Item < ApplicationRecord
   belongs_to       :charges
   belongs_to       :prefecture
   belongs_to       :days
+  has_one :purchase_management
 end
