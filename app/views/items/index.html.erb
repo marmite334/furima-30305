@@ -131,7 +131,7 @@
             <%= link_to item_path(item) do %>
               <div class='item-img-content'>
                 <%= image_tag item.image, class: "item-img" %>
-                <% if PurchaseManagement.exists?(item_id: item.id) %>
+                <% if PurchaseManagement.exists?(id: item.purchase_management) %>
                   <div class='sold-out'>
                     <span>Sold Out!!</span>
                   </div>

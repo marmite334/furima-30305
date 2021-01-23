@@ -7,6 +7,6 @@ FactoryBot.define do
     address                { '八日市場イ' }
     building               { '八日市場駅' }
     phone_number           { '11111111111' }
-    purchase_management_id { 1 }
+    purchase_management_id { Faker::Number.number(digits: 1) }
   end
 end
